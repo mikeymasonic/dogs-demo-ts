@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import { fetchList } from '../services/dogsAPI';
+import { fetchList, fetchDetail } from '../services/dogsAPI';
 
 export interface BreedContextInterface {
   breeds: Array<string>,
@@ -29,7 +29,27 @@ export const BreedProvider = ({ children }: { children: React.ReactNode }) => {
     setFilteredBreeds(breeds.slice(0, 12));
   }, [breeds]);
 
+  useEffect(() => {
+    const searchResults = breeds.filter(breed => breed.includes(searchText));
+    setLoading(true);
+    setFilteredBreeds(searchResults.slice(0, 12));
+    setLoading(false);
+  }, [breeds, searchText]);
+
+  const handleChange = ({ target }) => {
+    setSearchText(target.value);
+  };
+
+  const handleDetail = (breeds) => {
+    setLoading(true);
+    fetchDetail(breeds)
+      .then(apiBreeds => setBreedDetail(apiBreeds))
+      .finally(() => setLoading(false));
+  };
+
   
+
+
   
   
 
