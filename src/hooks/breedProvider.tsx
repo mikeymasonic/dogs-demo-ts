@@ -25,6 +25,11 @@ export const BreedProvider = ({ children }: { children: React.ReactNode }) => {
       .finally(() => setLoading(false));
   }, []);
 
+  useEffect(() => {
+    setFilteredBreeds(breeds.slice(0, 12));
+  }, [breeds]);
+
+  
   
   
 
