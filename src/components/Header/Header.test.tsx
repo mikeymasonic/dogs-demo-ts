@@ -6,7 +6,6 @@ import Header from './Header';
 describe('Header component', () => {
   test('it should mock the context and render Header', () => {
     const contextValues = 'husky';
-    const handleChangeValue = { target: 'husky' };
 
     jest
       .spyOn(BreedContext, 'useSearchText')
@@ -14,7 +13,7 @@ describe('Header component', () => {
 
     jest
       .spyOn(BreedContext, 'useHandleChange')
-      .mockImplementation(() => handleChangeValue);
+      .mockImplementation(() => () => {});
 
     const wrapper = shallow(<Header />);
     expect(wrapper).toMatchSnapshot();
