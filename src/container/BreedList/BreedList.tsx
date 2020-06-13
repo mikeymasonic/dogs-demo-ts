@@ -5,6 +5,7 @@ import {
   useSearchText,
 } from '../../hooks/breedProvider';
 import List from '../../components/List/List';
+import styles from './BreedList.css';
 
 const BreedList = () => {
   const filteredBreeds = useFilteredBreeds();
@@ -29,7 +30,7 @@ const BreedList = () => {
       </section>
     );
 
-  return <section>{breedNodes}</section>;
+  return <section className={styles.BreedList}>{breedNodes}</section>;
 };
 
 export default BreedList;

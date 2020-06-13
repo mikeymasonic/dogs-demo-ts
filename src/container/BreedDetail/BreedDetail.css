@@ -1,0 +1,10 @@
+.BreedDetail {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: auto;
+  margin-top: 1rem;
+  background-color: gray;
+  max-width: 80rem;
+}
