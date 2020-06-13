@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHandleChange, useSearchText } from '../../hooks/breedProvider';
+import styles from './Header.css';
 
 const Header = () => {
   const searchText = useSearchText();
@@ -9,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <section>
+    <section className={styles.Header}>
       <h1 onClick={refreshPage}>Dogs!</h1>
       <input
         type="text"
