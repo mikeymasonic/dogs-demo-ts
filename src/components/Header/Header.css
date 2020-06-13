@@ -1,0 +1,22 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Header h1 {
+  text-decoration: none;
+  margin-top: -0.15rem;
+  cursor: pointer;
+  color: gray;
+  -webkit-text-stroke: 1px black;
+}
+
+.Header h1:hover {
+  color: hotpink;
+}
+
+.Header input {
+  width: 15rem;
+  height: 2rem;
+  margin-top: -0.25rem;
+}

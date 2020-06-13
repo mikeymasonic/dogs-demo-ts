@@ -1,0 +1,8 @@
+.BreedList {
+  background-color: gray;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 80rem;
+}
