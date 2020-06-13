@@ -1,5 +1,5 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
-import { fetchList, fetchDetail } from "../services/dogsAPI";
+import React, { createContext, useState, useContext, useEffect } from 'react';
+import { fetchList, fetchDetail } from '../services/dogsAPI';
 
 export type BreedContext = {
   breeds: Array<string>;
@@ -16,7 +16,7 @@ const BreedContext = createContext<BreedContext | null>(null);
 export const BreedProvider = ({ children }: { children: React.ReactNode }) => {
   const [breeds, setBreeds] = useState<string[]>([]);
   const [filteredBreeds, setFilteredBreeds] = useState<string[]>([]);
-  const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState('');
   const [breedDetail, setBreedDetail] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
 
