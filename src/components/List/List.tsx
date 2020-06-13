@@ -1,5 +1,5 @@
-import React from "react";
-import { useHandleDetail } from "../../hooks/breedProvider";
+import React from 'react';
+import { useHandleDetail } from '../../hooks/breedProvider';
 
 const List = ({ breed }: { breed: string }) => {
   const handleDetail = useHandleDetail();
@@ -11,7 +11,7 @@ const List = ({ breed }: { breed: string }) => {
         value={breed}
         name="dogs"
         id={breed}
-        onClick={() => handleDetail(breed)}
+        onClick={() => handleDetail!(breed)}
       />
       <label htmlFor={breed}>{breed}</label>
     </section>
