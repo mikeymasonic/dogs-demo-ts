@@ -1,12 +1,12 @@
 import React from 'react';
 import { useHandleDetail } from '../../hooks/breedProvider';
-import styles from './List.css';
+import './List.css';
 
 const List = ({ breed }: { breed: string }) => {
   const handleDetail = useHandleDetail();
 
   return (
-    <section className={styles.List}>
+    <section className={'List'}>
       <input
         type="radio"
         value={breed}
